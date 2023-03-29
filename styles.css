@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: hsl(36, 100%, 99%);
+}
+
+/* Nav styling */
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  background-color: hsl(36, 100%, 99%);
+  padding: 2vh 3vw;
+}
+
+#nav-close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
+
+#nav-open {
+  padding-right: 7vw;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color:hsl(36, 100%, 99%);
+  width: 75vw;
+  z-index: 10;
+}
+
+#menu ul {
+    padding-top: 120px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width:100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(240, 100%, 5%, 0.3);
+    z-index: 1;
+}
+
+
+#menu li {
+    list-style-type: none;
+    padding: 14px 25px;
+    color:hsl(240, 100%, 5%);
+    font-size: 18px;
+}
+
+#menu li:active {
+    color: hsl(36, 100%, 99%);
+    background-color:hsl(5, 85%, 63%);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "content1"
+    "content2"
+    "content3";
+  grid-row-gap: 60px;
+  padding: 12vh 4vw 0 4vw;
+  margin: 0 auto;
+}
+
+/* Hero display styling */
+
+#c1 {
+    grid-area: "content1";
+}
+
+#desktop-hero {
+  display: none;
+}
+
+#mobile-hero {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 41px;
+  padding: 20px 10px 20px 0;
+}
+
+#c1 p {
+  color: hsl(236, 13%, 42%);
+  font-size: 15px;
+  line-height: 24px;
+  padding-bottom: 15px;
+}
+
+button {
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  width: 55%;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: hsl(36, 100%, 99%);
+  padding: 15px;
+}
+
+/* 'New' section styling */
+
+#c2 {
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(240, 100%, 5%);
+  grid-area: "content2"
+}
+
+div#c2 h2 {
+  color: hsl(35, 77%, 62%);
+  margin: 0 5vw;
+  padding-top: 25px;
+  font-size: 30px;
+}
+
+div.new {
+  margin: 0 5vw;
+  border-bottom: 0.4px solid hsl(233, 8%, 79%);
+  padding: 30px 0;
+}
+
+div.new h3 {
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+
+div.new p {
+  color: hsl(233, 8%, 79%);
+  font-size: 15px;
+  line-height: 24px;
+  padding-right: 15px;
+}
+
+/* Image & article styling */
+
+#c3 {
+    grid-area: "content3";
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 35px;
+}
+.card img {
+    width: 30%;
+    max-width: 120px;
+    height: auto;
+  }
+
+.text {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 17px;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: hsl(233, 8%, 79%);
+  font-size: 30px;
+}
+
+.card h4 {
+  color: hsl(240, 100%, 5%);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card p {
+  color: hsl(236, 13%, 42%);
+  font-size: 15px;
+  line-height: 24px;
+}
