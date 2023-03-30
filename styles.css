@@ -155,8 +155,11 @@ div#c2 h2 {
 
 div.new {
   margin: 0 5vw;
-  border-bottom: 0.4px solid hsl(233, 8%, 79%);
   padding: 30px 0;
+}
+
+div.new:nth-child(-n + 3) {
+    border-bottom: 0.4px solid hsl(233, 8%, 79%);
 }
 
 div.new h3 {
@@ -188,21 +191,26 @@ div.new p {
 }
 
 .card {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 35px;
+  display: grid;
+  grid-template-columns: auto 66%;
+  grid-template-rows: max-content;
+  grid-template-areas: "cardimage cardtext";
+  align-items: center;
+  grid-column-gap: 23px;
+  padding-bottom: 25px;
 }
+
 .card img {
-  width: 30%;
-  max-width: 120px;
-  height: auto;
+  grid-area: cardimage;
+  width: 100%;
 }
 
 .text {
+  grid-area: cardtext;
   display: flex;
   flex-direction: column;
-  padding: 3px 17px;
-  justify-content: space-between;
+  padding: 3px 0;
+  gap: 0.5rem;
 }
 
 .card h3 {
@@ -229,6 +237,7 @@ div.new p {
   color: hsl(236, 13%, 42%);
   font-size: 15px;
   line-height: 24px;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 900px) {
@@ -247,13 +256,13 @@ div.new p {
   #header {
     position: fixed;
     top: 0;
-    width: 80vw;
+    width: 76vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 8vh;
     background-color: hsl(36, 100%, 99%);
-    padding: 3vh 10vw 2vh 10vw;
+    padding: 6vh 12vw 2vh 12vw;
   }
 
   #menu {
@@ -269,13 +278,13 @@ div.new p {
     align-items: center;
     justify-content: space-between;
     padding-top: 0;
-    width: 32vw;
+    width: 30vw;
   }
 
   #menu li {
     list-style-type: none;
     color: hsl(236, 13%, 42%);
-    font-size: 16px;
+    font-size: 15px;
     padding: 0;
     transition: color 0.3s;
   }
@@ -290,13 +299,13 @@ div.new p {
 
   main {
     grid-template-columns: 1fr 32%;
-    grid-template-rows: auto auto;
-    grid-column-gap: 30px;
+    grid-template-rows: max-content auto;
+    grid-column-gap: 32px;
     grid-row-gap: 65px;
     grid-template-areas:
       "hero new"
       "article article";
-    padding: 14vh 10vw 0 10vw;
+    padding: 17vh 12vw 0 12vw;
   }
 
   #c1 {
@@ -307,14 +316,15 @@ div.new p {
     grid-template-areas:
       "image image"
       "title text";
-    grid-column-gap: 65px;
-    grid-row-gap: 10px;
+    grid-column-gap: 60px;
+    grid-row-gap: 12px;
     align-items: center;
   }
 
   h1 {
-    font-size: 51px;
-    line-height: 51px;
+    font-size: 55px;
+    line-height: 56px;
+    padding: 0;
   }
 
   #mobile-hero {
@@ -330,12 +340,13 @@ div.new p {
 
   #title {
     grid-area: title;
+    align-self: center;
   }
 
   #text {
     grid-area: text;
-    align-self: end;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-top: 25px;
   }
 
   button {
@@ -345,17 +356,18 @@ div.new p {
   #c2 {
     grid-area: new;
     padding: 0;
+
   }
 
   div#c2 h2 {
     color: hsl(35, 77%, 62%);
     margin: 0 2.5vw;
-    padding-top: 28px;
+    padding-top: 32px;
     font-size: 38px;
   }
 
   div.new {
-    margin: 0 2.5vw;
+    margin: 0 2vw;
     padding: 30px 0;
   }
 
@@ -367,13 +379,13 @@ div.new p {
     grid-area: article;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
     grid-template-rows: min-content;
-    grid-column-gap: 10px;
     grid-template-areas: "article1 article2 article3";
   }
 
   .text {
-    padding: 3px 18px;
+    padding-right: 15px;
   }
 
   #card1 {
