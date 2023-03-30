@@ -263,7 +263,7 @@ div.new p {
     align-items: center;
     height: 8vh;
     background-color: hsl(36, 100%, 99%);
-    padding: 6vh 12vw 2vh 12vw;
+    padding: 10vh 12vw 2vh 12vw;
   }
 
   #menu {
@@ -306,7 +306,7 @@ div.new p {
     grid-template-areas:
       "hero new"
       "article article";
-    padding: 17vh 12vw 0 12vw;
+    padding: 20vh 12vw 0 12vw;
   }
 
   #c1 {
