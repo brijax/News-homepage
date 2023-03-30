@@ -41,7 +41,7 @@ This was my first time using Grid in earnest, and for the mobile design, it felt
 
 When the mobile design styling was finished, I unhid the mobile menu and worked on the Javascript to open and close the menu.
 
-![Mobile Menu](./assets/images/screenshot-mobile.jpg)
+<img src="./assets/images/screenshot-mobile.jpg" width="200px" alt="Mobile Screenshot" />
 
 I then moved on to the desktop design, where I faced most of my Grid challenges. I used a 2 x 2 grid for the main content and another grid to style the div containing the main image and related text, where I had to do quite a lot of fiddling to make it align with other parts of the page. If I were to do this challenge again, I would definitely use a 3 x 3 grid for the main content to try and reduce the extra styling I had to do.
 
@@ -72,5 +72,5 @@ I'd also like to use more Javascript in future projects.
 
 ## Acknowledgments
 
-Big thank you to Roan for encouraging me to take on this project and for the helpful advice! [Roan MacMillan GitHub](https://github.com/RoanMacmillan)
+Big thank you to [Roan MacMillan](https://github.com/RoanMacmillan) for encouraging me to take on this project and for the helpful advice!
 
